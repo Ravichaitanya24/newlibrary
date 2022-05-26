@@ -12,3 +12,9 @@ def newDeploy(ip,contextpath)
 {
   sh "scp /home/ubuntu/.jenkins/workspace/declarativepipelinesharedlibraries/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat9/webapps/${contextpath}.war"
 }
+
+def runSelenium(path)
+{
+  sh 'java -jar ${path}/testing.jar'
+}
+
