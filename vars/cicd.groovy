@@ -17,4 +17,3 @@ def runSelenium(path)
 {
   sh "java -jar $path/testing.jar"
 }
-
